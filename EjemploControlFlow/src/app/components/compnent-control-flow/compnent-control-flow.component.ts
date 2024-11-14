@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './compnent-control-flow.component.css'
 })
 export class CompnentControlFlowComponent {
-  edad: number = 19;
+    //edad: number = 19;
+
+    roles: string [] = ["admin", "editor", "suscriptor"];
+    rol: string = this.roles [0]
 
 }

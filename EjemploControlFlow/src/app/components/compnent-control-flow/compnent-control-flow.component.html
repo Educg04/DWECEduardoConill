@@ -1,6 +1,30 @@
 <section class="mensaje">
-    @if (edad > 18) {
+   <!--  @if (edad > 18) {
         <p>Es menor de edad</p>
 
+    }-->
+
+    @switch (rol) {
+        @case ('admin') {
+            <li><a href="">Crear nuevo</a></li>
+            <li><a href="">Ver listado </a></li>
+            <li><a href="">Crear Usuario</a></li>
+            <li><a href="">Borrar Usuario</a></li>
+
+        }
+
+        @case ('suscriptor') {
+            <li><a href="">Ver listado </a></li>
+            
+        }
+
+        @case ('editor') {
+            <li><a href="">Crear nuevo</a></li>
+            <li><a href="">Ver listado </a></li>
+        }
+
+        @default {
+            <p>No tienes permisos para hacer nada pringado</p>
+        }
     }
 </section>

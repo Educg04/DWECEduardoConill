@@ -1,26 +1,32 @@
-<div>
+    
+<div class="container">
     <div class="n1">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Titulo Noticia</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alex mata a 7 latinoamericanos desconocidos">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo de la Noticia" [(ngModel)]="newNoticia.titulo">
         </div>
+
         <div class="mb-3">
             <label for="exampleFormControlInput2" class="form-label">Imagen</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="url de la imagen a añadir" [(ngModel)]="newNoticia.imagen">
         </div>
+
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Contenido Noticia</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="exampleFormControlTextarea1" class="form-label">Contenido Noticia</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Contenido de la Noticia" [(ngModel)]="newNoticia.cuerpo"></textarea>
         </div>
+
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="exampleFormControlInput1" class="form-label">Fecha</label>
+            <input type="datetime-local" class="form-control" id="exampleFormControlInput1" placeholder="Fecha" [(ngModel)]="newNoticia.fecha">
         </div>
+
+        <button (click)="guardarDatos()">Guardar</button>
+        
     </div>
     <div class="n2">
         <h2>Noticias a printar</h2>
         <div id="listaNoticias" [innerHTML]="cargarDatos()"></div>
     </div>
-        
 </div>
     
