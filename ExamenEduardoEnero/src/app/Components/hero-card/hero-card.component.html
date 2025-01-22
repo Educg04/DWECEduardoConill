@@ -1,0 +1,22 @@
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="a1">
+            <img [src]="miHero.image1"  alt="miPersonaje.first_name">
+        </div>
+        
+        <div class="col-md-8">
+            <div class="card-body">
+                <div class="container">
+                    <div class="a1"><h1>{{miHero.heroname}}</h1></div>
+                    <div class="a1"><h1>{{miHero.fullname}}</h1></div>
+                     <div class="botonera">
+                        <app-botorera [padre]=" 'card' " [miId]="miHero.id" class="w-100"></app-botorera>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

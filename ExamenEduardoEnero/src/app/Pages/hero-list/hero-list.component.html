@@ -1,0 +1,19 @@
+<div class="classPersonajesList p-3"> 
+    <h2>Mis Personajes</h2>
+    <!-- 
+    <div class="mt-5">
+        <app-personajes-filter (ladoSeleccionado)="getSite($event)"></app-personajes-filter>
+    </div>
+    !-->
+    <div class="row g-2 mt-5">
+       @for (heroeH of characters; track heroeH.id) {
+        <article class="col-12 col-md-6 col-lg-4">
+            <app-hero-card [miHero]="heroeH"></app-hero-card>
+        </article>
+       }
+      
+    @empty {
+        <h2>NO HAY RESULTADOS</h2>
+    }
+    </div>
+</div>   

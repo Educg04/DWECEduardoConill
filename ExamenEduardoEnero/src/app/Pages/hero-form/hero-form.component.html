@@ -1,0 +1,107 @@
+<section>
+    <h1 class="mt-3 ms-5">{{tipo}} Personaje</h1>
+    <hr class="ms-5 me-5">
+    <form [formGroup]="personajeFroms" (submit)="sendPersonaje()" class="card ms-5 me-5 mt-5 w-auto">
+       
+        
+
+        <div class="d-flex flex-column">
+            <label for="heroname" class="ms-5 mt-3">Hero Name:</label>
+            <input id="heroname" formControlName="heroname" class="ms-5 me-5" type="text" placeholder="Introduzca el nombre del personaje">
+            @if(checkControl('first_name' , 'required'))
+            {
+                <p class="error ms-5">Error: El campo esta vacío</p>
+            }
+        </div>
+
+        <div class="d-flex flex-column">
+            <label for="fullname" class="ms-5 mt-3">Full Name:</label>
+            <input id="fullname" formControlName="fullname" class="ms-5 me-5" type="text" placeholder="Nombre Completo">
+            
+        </div>
+
+        <div class="d-flex flex-column">
+            <label for="image1" class="ms-5 mt-3">Image 1:</label>
+            <input id="image1" formControlName="image1" class="ms-5 me-5" type="text" placeholder="Imagen 1">
+           
+        </div>
+
+        <div class="d-flex flex-column">
+            <label for="image2" class="ms-5 mt-3">image 2</label>
+            <input id="image2" formControlName="image2" class="ms-5 me-5" type="text" placeholder="Imagen 2">
+           
+        </div>
+
+        <div class="d-flex flex-column">
+            <label for="image3" class="ms-5 mt-3">Image 3</label>
+            <input id="image3" formControlName="image3" class="ms-5 me-5" type="text" placeholder="Imagen 3">
+           
+        </div>
+
+        <div class="d-flex flex-column">
+            <label for="gender" class="ms-5 mt-3">Gender</label>
+            <input id="gender" formControlName="gender" class="ms-5 me-5" type="text" placeholder="Gender">
+          
+        </div>
+
+        <div class="d-flex flex-column">
+            <label for="race" class="ms-5 mt-3">Race</label>
+            <input id="race" formControlName="race" class="ms-5 me-5" type="text" placeholder="Race">
+          
+        </div>
+
+        <div class="d-flex flex-column">
+            <label for="aligment" class="ms-5 mt-3">aligment</label>
+            <input id="aligment" formControlName="aligment" class="ms-5 me-5" type="text" placeholder="aligment">
+          
+        </div>
+
+        <h1> Stats </h1>
+
+        <div class="d-flex flex-column">
+            <label for="intelligence" class="ms-5 mt-3">Intelligence</label>
+            <input id="intelligence" formControlName="intelligence" class="ms-5 me-5" type="number" placeholder="intelligence">
+          
+        </div>
+
+        <div class="d-flex flex-column">
+            <label for="strength" class="ms-5 mt-3">strength</label>
+            <input id="strength" formControlName="strength" class="ms-5 me-5" type="number" placeholder="strength">
+          
+        </div>
+
+        <div class="d-flex flex-column">
+            <label for="speed" class="ms-5 mt-3">speed</label>
+            <input id="speed" formControlName="speed" class="ms-5 me-5" type="number" placeholder="speed">
+          
+        </div>
+
+        <div class="d-flex flex-column">
+            <label for="durability" class="ms-5 mt-3">durability</label>
+            <input id="durability" formControlName="durability" class="ms-5 me-5" type="number" placeholder="durability">
+          
+        </div>
+
+        <div class="d-flex flex-column">
+            <label for="power" class="ms-5 mt-3">power</label>
+            <input id="power" formControlName="power" class="ms-5 me-5" type="number" placeholder="power">
+          
+        </div>
+
+        <div class="d-flex flex-column">
+            <label for="combat" class="ms-5 mt-3">combat</label>
+            <input id="combat" formControlName="combat" class="ms-5 me-5" type="number" placeholder="combat">
+          
+        </div>
+
+    
+
+      
+        <div class="mb-5">
+            <input class="ms-5 me-5 mt-5 btn btn-warning w-auto" type="submit" value="{{tipo}} Personaje" [disabled]="!personajeFroms.valid">
+            <a [routerLink]="['/home']" class="btn btn-light mt-5"> Volver</a>  
+        </div>
+        
+
+    </form>
+</section>
